@@ -26,4 +26,7 @@ test_func() ->
 	receive
 		X -> 
 			list_to_atom(X)
+	after 
+		5000 ->
+				error(boom)
 	end.	
